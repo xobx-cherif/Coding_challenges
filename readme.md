@@ -1,6 +1,6 @@
 # Coding challenge
 
-##Tower of Hanoi
+## Tower of Hanoi
 
 [Tower of hanoi wiki](https://en.wikipedia.org/wiki/Tower_of_Hanoi)
 
@@ -75,7 +75,7 @@ The idea is to simulate random (x, y) points in a 2-D plane with domain as a squ
 
 ![](./images/pi.png)
 
-We know that area of the square is 1 unit sq while that of circle is $$\pi \ast (\frac{1}{2})^{2} = \frac{\pi}{4}$$. Now for a very large number of generated points,
+We know that area of the square is 1 unit sq while that of circle is $$\pi*(1/2)^{2} = \pi/4$$. Now for a very large number of generated points,
 
 ![](./images/pi1.png)
 
@@ -83,7 +83,7 @@ that is,
 
 ![](./images/pi2.png)
 
-The beauty of this algorithm is that we don’t need any graphics or simulation to display the generated points. We simply generate random $$(x, y)$$ pairs and then check if $$x^{2} + y^{2} \leqslant 1$$ . If yes, we increment the number of points that appears inside the circle. In randomized and simulation algorithms like Monte Carlo, the more the number of iterations, the more accurate the result is. Thus, the title is “Estimating the value of Pi” and not “Calculating the value of Pi”. Below is the algorithm for the method:
+The beauty of this algorithm is that we don’t need any graphics or simulation to display the generated points. We simply generate random $$(x, y)$$ pairs and then check if $$x^{2} + y^{2} <= 1$$ . If yes, we increment the number of points that appears inside the circle. In randomized and simulation algorithms like Monte Carlo, the more the number of iterations, the more accurate the result is. Thus, the title is “Estimating the value of Pi” and not “Calculating the value of Pi”. Below is the algorithm for the method:
 
 The Algorithm
 1. Initialize circle_points, square_points and interval to 0.
