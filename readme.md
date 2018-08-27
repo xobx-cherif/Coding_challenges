@@ -24,7 +24,7 @@ With 3 disks, the puzzle can be solved in 7 moves. The minimal number of moves r
 Determinants are of those functions that make absolutely no sense when you meet them for the first time. Multiply all the values in a column or row with all values in other columns or row, sum them up … and it works!
 Let's see how you could implement determinant calculation function!!
 
-##Next permutation
+## Next permutation
 
 Given a totally ordered set, find the next permutation of the current configuration: FADE -> FAED -> FDAE -> FDEA -> ...
 [Total order wiki](https://en.wikipedia.org/wiki/Total_order)
