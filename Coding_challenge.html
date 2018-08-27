@@ -1,0 +1,159 @@
+<h1 id="coding-challenge">Coding challenge</h1>
+
+<h2 id="tower-of-hanoi">Tower of Hanoi</h2>
+<p><a href="https://en.wikipedia.org/wiki/Tower_of_Hanoi">Tower of hanoi wiki</a></p>
+<div class="figure">
+<img src="./images/Tower_of_Hanoi.jpeg" alt="Tower of hanoi" />
+<p class="caption">Tower of hanoi</p>
+</div>
+<p>The Tower of Hanoi (also called the Tower of Brahma or Lucas' Tower and sometimes pluralized) is a mathematical game or puzzle. It consists of three rods and a number of disks of different sizes, which can slide onto any rod. The puzzle starts with the disks in a neat stack in ascending order of size on one rod, the smallest at the top, thus making a conical shape.</p>
+<p>The objective of the puzzle is to move the entire stack to another rod, obeying the following simple rules:</p>
+<pre><code>Only one disk can be moved at a time.
+Each move consists of taking the upper disk from one of the stacks and placing it on top of another stack or on an empty rod.
+No disk may be placed on top of a smaller disk.</code></pre>
+<p>With 3 disks, the puzzle can be solved in 7 moves. The minimal number of moves required to solve a Tower of Hanoi puzzle is <br /><span class="math display">2<sup><em>n</em></sup> − 1</span><br />, where n is the number of disks.</p>
+<h2 id="determinant">Determinant</h2>
+<p><a href="https://en.wikipedia.org/wiki/Determinant">Determinant wiki</a></p>
+<p>Determinants are of those functions that make absolutely no sense when you meet them for the first time. Multiply all the values in a column or row with all values in other columns or row, sum them up … and it works! Let's see how you could implement determinant calculation function!!</p>
+<h2 id="next-permutation">Next permutation</h2>
+<p>Given a totally ordered set, find the next permutation of the current configuration: FADE -&gt; FAED -&gt; FDAE -&gt; FDEA -&gt; ... <a href="https://en.wikipedia.org/wiki/Total_order">Total order wiki</a> This tool can quickly become very useful in various competitions when you need to speed your algorithm up. The algorithm itself is simple. Beginning from end, find the longest decreasing sequence 42<strong>531</strong> and denote the preceding item as pivot 4<strong>2</strong>531. Swap pivot with the smallest higher item 4<strong>3</strong>5<strong>2</strong>1 in the sequence and revert the sequence 43<strong>125</strong>.</p>
+<h2 id="counting-1-bits">Counting 1-bits</h2>
+<p>When you write down a positive integer as binary number, how many 1s do you get? For example, 99 = 0b1100011. An obvious solution would be to take a single-bit mask, walk over the number X &amp; (1 &lt;&lt; k) and count non-zero results up. But this solution counts both 0s and 1s. Can you do better by only counting 1s and completely ignoring 0s? There’s a ton of beautiful and surprising bit-tricks you can do. Too bad we don’t need them any more.</p>
+<h2 id="eratosthenes-sieve">Eratosthenes sieve</h2>
+<p><a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">Erastosthenes sieve wiki</a></p>
+<div class="figure">
+<img src="./images/sieve.png" alt="Sieve" />
+<p class="caption">Sieve</p>
+</div>
+<p>In mathematics, the sieve of Eratosthenes is a simple, ancient algorithm for finding all prime numbers up to any given limit. It does so by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with the first prime number, 2. The multiples of a given prime are generated as a sequence of numbers starting from that prime, with constant difference between them that is equal to that prime. This is the sieve's key distinction from using trial division to sequentially test each candidate number for divisibility by each prime.</p>
+<p>The sieve of Eratosthenes is a beautiful piece. It’s also surprisingly powerful and fast when segmented implementation is applied, on i7 CPU (single-threaded) you can generate prime numbers up to 10⁹ within 1 second.</p>
+<h2 id="binary-search">Binary search</h2>
+<p><a href="https://en.wikipedia.org/wiki/Binary_search_algorithm">Binary search wiki</a></p>
+<p>In computer science, binary search, also known as half-interval search, logarithmic search, or binary chop, is a search algorithm that finds the position of a target value within a sorted array. Binary search compares the target value to the middle element of the array. If they are not equal, the half in which the target cannot lie is eliminated and the search continues on the remaining half, again taking the middle element to compare to the target value, and repeating this until the target value is found. If the search ends with the remaining half being empty, the target is not in the array. Even though the idea is simple, implementing binary search correctly requires attention to some subtleties about its exit conditions and midpoint calculation.</p>
+<div class="figure">
+<img src="./images/binary_search.png" alt="Binary search" />
+<p class="caption">Binary search</p>
+</div>
+<p>Binary search runs in logarithmic time in the worst case, making <br /><span class="math display"><em>O</em>(<em>l</em><em>o</em><em>g</em><em>n</em>)</span><br /> comparisons, where n is the number of elements in the array, the O is Big O notation, and log is the logarithm. Binary search takes constant <br /><span class="math display">(<em>O</em>(1))</span><br /> space, meaning that the space taken by the algorithm is the same for any number of elements in the array. Binary search is faster than linear search except for small arrays, but the array must be sorted first. Although specialized data structures designed for fast searching, such as hash tables, can be searched more efficiently, binary search applies to a wider range of problems.</p>
+<p>There are numerous variations of binary search. In particular, fractional cascading speeds up binary searches for the same value in multiple arrays. Fractional cascading efficiently solves a number of search problems in computational geometry and in numerous other fields. Exponential search extends binary search to unbounded lists. The binary search tree and B-tree data structures are based on binary search.</p>
+<h2 id="monte-carlo---π">Monte carlo - π</h2>
+<p>Monte Carlo methods are a broad class of computational algorithms that rely on repeated random sampling to obtain numerical results. One of the basic examples of getting started with the Monte Carlo algorithm is the estimation of Pi. Randomized simulation should be understood as a random sampling from space of simulations under given distribution. How can we estimate π if the only tool we have at disposal is a good random number generator? When we choose a random coordinate (x, y) in range (-1, 1) and each point has equal chance to be chosen, the probability to hit a circle with unit radius is</p>
+<div class="figure">
+<img src="./images/carlo_pi.png" style="width:50.0%" />
+
+</div>
+<p>Having sufficiently large set of points and a good generator we can get as close as we want according to <a href="https://en.wikipedia.org/wiki/Chebyshev%27s_inequality">Chebyshev’s inequality</a>.</p>
+<p>Estimation of Pi The idea is to simulate random (x, y) points in a 2-D plane with domain as a square of side 1 unit. Imagine a circle inside the same domain with same diameter and inscribed into the square. We then calculate the ratio of number points that lied inside the circle and total number of generated points. Refer to the image below:</p>
+<div class="figure">
+<img src="./images/pi.png" />
+
+</div>
+<p>We know that area of the square is 1 unit sq while that of circle is <br /><span class="math display">$$\pi \ast (\frac{1}{2})^{2} = \frac{\pi}{4}$$</span><br />. Now for a very large number of generated points,</p>
+<div class="figure">
+<img src="./images/pi1.png" />
+
+</div>
+<p>that is,</p>
+<div class="figure">
+<img src="./images/pi2.png" />
+
+</div>
+<p>The beauty of this algorithm is that we don’t need any graphics or simulation to display the generated points. We simply generate random <br /><span class="math display">(<em>x</em>, <em>y</em>)</span><br /> pairs and then check if <br /><span class="math display"><em>x</em><sup>2</sup> + <em>y</em><sup>2</sup> ≤ 1</span><br /> . If yes, we increment the number of points that appears inside the circle. In randomized and simulation algorithms like Monte Carlo, the more the number of iterations, the more accurate the result is. Thus, the title is “Estimating the value of Pi” and not “Calculating the value of Pi”. Below is the algorithm for the method:</p>
+<p>The Algorithm 1. Initialize circle_points, square_points and interval to 0. 2. Generate random point <br /><span class="math display"><em>x</em></span><br />. 3. Generate random point <br /><span class="math display"><em>y</em></span><br />. 4. Calculate <br /><span class="math display"><em>d</em> = <em>x</em> * <em>x</em> + <em>y</em> * <em>y</em></span><br />. 5. If d &lt;= 1, increment circle_points. 6. Increment square_points. 7. Increment interval. 8. If increment &lt; NO_OF_ITERATIONS, repeat from 2. 9. Calculate pi = 4*(circle_points/square_points). 10. Terminate.</p>
+<h2 id="karatsuba-multiplication">Karatsuba multiplication</h2>
+<p>When you multiply two numbers on the paper, you probably follow the good old and naive way. Using Master theorem it is pretty straightforward to show that this algorithm requires <br /><span class="math display"><em>O</em>(<em>n</em>²)</span><br /> multiplications. But there’s actually very clever way to speed the things up.</p>
+<div class="figure">
+<img src="./images/karatsuba.png" />
+
+</div>
+<p>The middle part of table contains expression AD+BC which requires two <br /><span class="math display"><em>O</em>(<em>n</em>²/4)</span><br /> multiplications and one O(n) addition. And here is Karatsuba’s idea:</p>
+<div class="figure">
+<img src="./images/karatsuba1.png" />
+
+</div>
+<p>Since we already have AC and BD anyways, we can use only one <br /><span class="math display"><em>O</em>(<em>n</em>²/4)</span><br /> multiplication and four <br /><span class="math display"><em>O</em>(<em>n</em>)</span><br /> additions/subtractions to reach overall complexity <br /><span class="math display"><em>O</em>(<em>n</em><sup><em>l</em><em>o</em><em>g</em>(3)</sup>)</span><br />.</p>
+<p>Why don’t we use Karatsuba as replacement of the naive way? Well, for us a subtraction seems to be more difficult, non-intuitive and error-prone than addition. However, for computer there’s no difference.</p>
+<p>General theory and advanced algorithms could be seen in: polynomial rings, number theoretic transform, Toom-Cook, Schonhage-Strassen.</p>
+<h2 id="mccarthy-91">McCarthy 91</h2>
+<p><a href="https://en.wikipedia.org/wiki/McCarthy_91_function">McCarthy91 wiki</a></p>
+<p>No doubt it is one of the most useless functions ever, yet, the most profound for causing nightmares of computer science students.</p>
+<p>What does is do? When you plug a natural number N in, McCarthy91 flushes N-10 out, if N is larger than 100. Otherwise it always returns 91.</p>
+<p>Why should anybody have nightmares? Well, this function is being used as a study case for formal verification. In other words, you don’t have to implement it, you have to prove it is correct and finite, instead.</p>
+<h2 id="roots-of-the-polynomial">Roots of the polynomial</h2>
+<p>Let’s say we want to find roots of the polynomial, e.g. <br /><span class="math display"><em>x</em>⁵+<em>x</em>⁴+<em>x</em>³+<em>x</em>²+<em>x</em> + 1</span><br />.</p>
+<p>While there’s no analytical solution for higher order polynomials, numerical solution is just an application of linear algebra. All we need is to construct a matrix whose characteristic polynomial is the one we are solving.</p>
+<div class="figure">
+<img src="./images/roots.png" />
+
+</div>
+<p>To get the roots we then find eigenvalues of the matrix.</p>
+<h2 id="extended-euclidean-algorithm">Extended euclidean algorithm</h2>
+<p><a href="https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm">Extended euclidean algorithm wiki</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Diophantine_equation">Diophantine equation wiki</a></p>
+<p>One of the most fundamentals algorithms in number theory is extended euclidean algorithm. It’s purpose is to solve Diophantine equation</p>
+<p><br /><span class="math display"><em>a</em><em>x</em> + <em>b</em><em>y</em> = <em>G</em><em>C</em><em>D</em>(<em>a</em>, <em>b</em>)</span><br /></p>
+<p>Seriously, every programmer must know this one, I don’t even know what else to say.</p>
+<h2 id="huffman-coding">Huffman coding</h2>
+<p><a href="https://en.wikipedia.org/wiki/Huffman_coding">Huffman coding wiki</a></p>
+<p>For many years the Huffman coding was state of the art in statistical data compression. Even though it should be noted that the main reason probably was that arithmetic coding was patented.</p>
+<p>The idea is very similar to one of Samuel Morse, to create a sparse representation of the data.</p>
+<p>Unlike Morse code, Huffman codes have unique prefixes which removes the need for separator and resulting stream has only one way of decoding. Disadvantage is that any error in a single bit can easily break the remaining part of the message. Read the wiki by your own starting from here you are grown enough to look for informations. no more explanations will be provided 3:).</p>
+<h2 id="breaking-otp">Breaking OTP</h2>
+<p>Sometimes you read that one-time pad is an unbreakable cipher. And of course, completely broken example is usually attached.</p>
+<p>The problem is, people confuse the definition of perfect cipher for unbreakable. If the cipher is perfect (according to Shannon), the probability distribution of obtaining cipher-text instance from different plain-texts must be uniform. In other words, given some cipher-text there is an equal chance for any plain-text to be the source.</p>
+<p>What follows is that adversary with infinite computational power can’t get any information about plain-text from pure cipher-text.</p>
+<p>But that’s far from unbreakable. Even correctly used OTP can be easily broken. Imagine a bank that would encrypt a digital checks with OTP, how easy would it be to rewrite $100.00 to $999.99 at well-known check position?</p>
+<p>Is OPT a perfect cipher? Not in most implementations. While people emphasize the single use of key, they also forget about the uniformity of key distribution which is as important.</p>
+<p>When the following messages was generated the one-time rule was violated. The consequences are inevitable.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">ciphertext <span class="op">=</span> [
+    b<span class="st">&#39;m</span><span class="ch">\x99</span><span class="st">QH</span><span class="ch">\xfc\x99\xce</span><span class="st">l</span><span class="ch">\xfc</span><span class="st">&gt;</span><span class="ch">\x11\xf8</span><span class="st">1</span><span class="ch">\xda</span><span class="st">:</span><span class="ch">\x15</span><span class="st">&quot;6</span><span class="ch">\xd3</span><span class="st">b</span><span class="ch">\x07\x7f\xed\x87\xd5\xd4\xf0\xbb</span><span class="st">&#39;</span>,
+    b<span class="st">&#39;x</span><span class="ch">\x96</span><span class="st">^</span><span class="ch">\r\xb5\x83\x86</span><span class="st">u</span><span class="ch">\xee</span><span class="st">l</span><span class="ch">\x0e\xf8</span><span class="st">,</span><span class="ch">\xce</span><span class="st">:</span><span class="ch">\x06</span><span class="st"> 6</span><span class="ch">\xd0</span><span class="st">b</span><span class="ch">\n</span><span class="st">x</span><span class="ch">\xfd\x87\xd9\xc9\xe8</span><span class="st">&#39;</span>,
+    b<span class="st">&#39;m</span><span class="ch">\x90</span><span class="st">O^</span><span class="ch">\xfc\x80\xd3</span><span class="st">f</span><span class="ch">\xe7</span><span class="st">&gt;</span><span class="ch">\x16\xf4</span><span class="st">6</span><span class="ch">\x89</span><span class="st">w</span><span class="ch">\x05</span><span class="st">r8</span><span class="ch">\xcb</span><span class="st">-</span><span class="ch">\x04</span><span class="st">&#39;</span>,
+    b<span class="st">&#39;`</span><span class="ch">\x97</span><span class="st">O</span><span class="ch">\r\xbd\x9f\xc3</span><span class="st">%</span><span class="ch">\xe1</span><span class="st">q</span><span class="ch">\x0e\xb1</span><span class="st">5</span><span class="ch">\xdb</span><span class="st">u</span><span class="ch">\x0e</span><span class="st">5y</span><span class="ch">\xca</span><span class="st">*</span><span class="ch">\x1c</span><span class="st">7</span><span class="ch">\xec\xc2\xd2\xcb</span><span class="st">&#39;</span>,
+    b<span class="st">&quot;m</span><span class="ch">\x90</span><span class="st">[Y</span><span class="ch">\xfc\x80\xdf</span><span class="st">%</span><span class="ch">\xeb\x7f\x03\xe2</span><span class="st">b</span><span class="ch">\xc1</span><span class="st">{</span><span class="ch">\x16</span><span class="st">7y</span><span class="ch">\xdf</span><span class="st">&#39;</span><span class="ch">\x16</span><span class="st">y</span><span class="ch">\xa8\xc6\x97\xc2\xed\xa9</span><span class="st">p(&quot;</span>,
+    b<span class="st">&#39;`</span><span class="ch">\x9d</span><span class="st">N</span><span class="ch">\r\xb5\x8b\x86</span><span class="st">m</span><span class="ch">\xe0</span><span class="st">n</span><span class="ch">\x1f\xb1</span><span class="st">*</span><span class="ch">\xc8</span><span class="st">i@45</span><span class="ch">\xd2</span><span class="st">5</span><span class="ch">\x1d</span><span class="st">7</span><span class="ch">\xe9\xd0\xd6\xdf</span><span class="st">&#39;</span>,
+    b<span class="st">&#39;p</span><span class="ch">\x96\x1a</span><span class="st">L</span><span class="ch">\xfc\x83\xcf</span><span class="st">b</span><span class="ch">\xe7</span><span class="st">jZ</span><span class="ch">\xfe</span><span class="st">0</span><span class="ch">\x89</span><span class="st">s</span><span class="ch">\x0e</span><span class="st">r8</span><span class="ch">\x9d</span><span class="st">&amp;</span><span class="ch">\x12</span><span class="st">n&#39;</span>,
+    b<span class="st">&#39;p</span><span class="ch">\x96\x1a</span><span class="st">L</span><span class="ch">\xfc\x9b\xcf</span><span class="st">v</span><span class="ch">\xe6</span><span class="st">q</span><span class="ch">\x14\xb1</span><span class="st">-</span><span class="ch">\xdb</span><span class="st">:</span><span class="ch">\t</span><span class="st">&lt;y</span><span class="ch">\xd3</span><span class="st">-</span><span class="ch">\x1d</span><span class="st">r&#39;</span>,
+    b<span class="st">&#39;p</span><span class="ch">\x8b\x1a</span><span class="st">D</span><span class="ch">\xa8\xcd\xd2</span><span class="st">m</span><span class="ch">\xea</span><span class="st">l</span><span class="ch">\x1f\xf7</span><span class="st">-</span><span class="ch">\xdb\x7f</span><span class="st">@&amp;1</span><span class="ch">\xd8</span><span class="st">b</span><span class="ch">\x1f</span><span class="st">r</span><span class="ch">\xfb\xd4\x97\xc1\xf0\xa2</span><span class="st">t&#39;</span>,
+    b<span class="st">&#39;x</span><span class="ch">\x94</span><span class="st">V</span><span class="ch">\r\xa8\x85\xc7</span><span class="st">q</span><span class="ch">\xaf</span><span class="st">i</span><span class="ch">\x1f\xb1</span><span class="st">1</span><span class="ch">\xcc\x7f</span><span class="st">@=+</span><span class="ch">\x9d</span><span class="st">1</span><span class="ch">\x16</span><span class="st">r</span><span class="ch">\xe5</span><span class="st">&#39;</span>,
+    b<span class="st">&#39;p</span><span class="ch">\x8b\x1a</span><span class="st">O</span><span class="ch">\xa9\x99\x86</span><span class="st">d</span><span class="ch">\xaf</span><span class="st">z</span><span class="ch">\x08\xf4</span><span class="st">#</span><span class="ch">\xc4</span><span class="st">:</span><span class="ch">\x17</span><span class="st">;-</span><span class="ch">\xd5</span><span class="st">+</span><span class="ch">\x1d</span><span class="st">7</span><span class="ch">\xe9\x87\xd3\xd4\xfa\xad</span><span class="st">|&#39;</span>,
+    b<span class="st">&#39;p</span><span class="ch">\xd8</span><span class="st">IY</span><span class="ch">\xbd\x83\xc2</span><span class="st">%</span><span class="ch">\xee</span><span class="st">s</span><span class="ch">\x13\xf5</span><span class="st">b</span><span class="ch">\xdd</span><span class="st">r</span><span class="ch">\x05</span><span class="st">r+</span><span class="ch">\xd2</span><span class="st">#</span><span class="ch">\x01</span><span class="st">&#39;</span>,
+    b<span class="st">&#39;v</span><span class="ch">\x9e\x1a</span><span class="st">L</span><span class="ch">\xfc\x9e\xd3</span><span class="st">w</span><span class="ch">\xe9</span><span class="st">&gt;</span><span class="ch">\x0e\xfe</span><span class="st">0</span><span class="ch">\xc4\x7f\x0e</span><span class="st">&amp;&lt;</span><span class="ch">\xd9</span><span class="st">b</span><span class="ch">\x00\x7f\xe7\xd5\xd2</span><span class="st">&#39;</span>,
+    b<span class="st">&#39;x</span><span class="ch">\x96</span><span class="st">^</span><span class="ch">\r\x95\xcd\xce</span><span class="st">j</span><span class="ch">\xe3</span><span class="st">zZ</span><span class="ch">\xe6</span><span class="st">+</span><span class="ch">\xdd</span><span class="st">r</span><span class="ch">\t</span><span class="st">&lt;y</span><span class="ch">\xd0</span><span class="st">;S</span><span class="ch">\x7f\xe9\xc9\xd3</span><span class="st">&#39;</span>,
+    b<span class="st">&quot;~</span><span class="ch">\x8a</span><span class="st">[D</span><span class="ch">\xb2\x9e\x86</span><span class="st">j</span><span class="ch">\xe9</span><span class="st">&gt;</span><span class="ch">\x0e\xf9</span><span class="st">&#39;</span><span class="ch">\x89</span><span class="st">}</span><span class="ch">\x0f</span><span class="st">&gt;=</span><span class="ch">\xd8</span><span class="st">,Sd</span><span class="ch">\xe9\xc9\xd3</span><span class="st">&quot;</span>,
+    b<span class="st">&#39;q</span><span class="ch">\x97</span><span class="st">M</span><span class="ch">\r\xba\x88\xd1</span><span class="st">%</span><span class="ch">\xf6</span><span class="st">{</span><span class="ch">\x0e\xb1</span><span class="st">*</span><span class="ch">\xc6</span><span class="st">m@&amp;1</span><span class="ch">\xd8</span><span class="st">;St</span><span class="ch">\xfa\xc2\xd2\xd6</span><span class="st">&#39;</span>,
+    b<span class="st">&#39;m</span><span class="ch">\x90</span><span class="st">HB</span><span class="ch">\xa9\x8a\xce</span><span class="st">%</span><span class="ch">\xe2</span><span class="st">gZ</span><span class="ch">\xf7</span><span class="st">+</span><span class="ch">\xc7</span><span class="st">}</span><span class="ch">\x05</span><span class="st"> *</span><span class="ch">\x9d</span><span class="st">6</span><span class="ch">\x1c</span><span class="st">7</span><span class="ch">\xfc\xcf\xd2\x86\xfb\xa9</span><span class="st">t5&#39;</span>,
+    b<span class="st">&#39;n</span><span class="ch">\x90</span><span class="st">SA</span><span class="ch">\xb9\xcd\xcf</span><span class="st">%</span><span class="ch">\xf8</span><span class="st">{</span><span class="ch">\x1f\xe1</span><span class="st">b</span><span class="ch">\xde</span><span class="st">r</span><span class="ch">\t</span><span class="st">&gt;&lt;</span><span class="ch">\x9d\x0b</span><span class="st">S`</span><span class="ch">\xed\xc2\xc7</span><span class="st">&#39;</span>,
+    b<span class="st">&#39;9</span><span class="ch">\xd8</span><span class="st">_I</span><span class="ch">\xbb\x8c\xd4</span><span class="st">%</span><span class="ch">\xee</span><span class="st">r</span><span class="ch">\x16\xf0</span><span class="st">,</span><span class="ch">\x89</span><span class="st">j</span><span class="ch">\x0f</span><span class="st">7y</span><span class="ch">\x9d</span><span class="st">bS7</span><span class="ch">\xa8\x87\x97\x86\xbf</span><span class="st">&#39;</span>,
+]</code></pre></div>
+<p><strong>A little help</strong>: if you decipher the code the result will be something like the following <code>['take?this kiss upon?t',  'and ?n parting from?y',  'thus?much let me av?w',  'you ?re not wrong w?o',  'that?my days have b?e',  'yet ?f hope has flo?n',  'in a?night or in a ?a',  'in a?vision or in n?n',  'is i? therefore the?l',  'all ?hat we see or ?e',  'is b?t a dream with?n',  'i st?nd amid the ro?r',  'of a?surf tormented?s',  'and ? hold within m? ',  'grai?s of the golde? ',  'how ?ew yet how the? ',  'thro?gh my fingers ?o',  'whil? i weep while ? ',  '  ed?ar allan poe  ? ']</code></p>
+<p>## No-condition swap</p>
+<p>Another piece from a bit-trick family. How to swap two integers if you can’t use any condition?</p>
+<p>It is not an algorithm for daily use. The idea is rather proof of concept that it is indeed possible. Similar tricks are used by compiler during code optimizations to spare few more ticks of CPU time.</p>
+<p>So the goal is to write a function to swap two integers without using any condition statement.</p>
+<h2 id="perceptron">Perceptron</h2>
+<p><a href="https://en.wikipedia.org/wiki/Perceptron">Perceptron wiki</a></p>
+<p>Perceptron is a beautiful statistical learning device for classification. Perceptron is very simple to implement, it is an on-line algorithm, but what’s most important, it is a combination of mathematical function, learning algorithm and a proof of the algorithm correctness when applied on linearly separable sets.</p>
+<div class="figure">
+<img src="./images/percept.png" />
+
+</div>
+<h2 id="monopoly">Monopoly</h2>
+<p>Playing Monopoly, what is the probability that you step at position #24 during the first round?</p>
+<p>Law of total probability says that the chance to step on certain position is sum of disjoint events of how we could get there. In this case, we get at #24 if we tossed 1 while standing at #23, or we tossed 2 while standing at #22, … or we tossed 6 while standing at #18. This leads to a recursive formula.</p>
+<div class="figure">
+<img src="./images/monopoly.png" />
+
+</div>
+<p>It looks quite familiar, doesn’t it? Right, Fibonacci numbers.</p>
+<p>Strategy to choose? I advice you to use Dynamic programming.</p>
+<h2 id="k-means">K-means</h2>
+<p><a href="https://en.wikipedia.org/wiki/K-means_clustering">K-means wiki</a></p>
+<p>Very easy, yet very power technique used in unsupervised learning is k-means clustering.</p>
+<p>K-means first chooses some random clusters. Then assigns each point to the nearest cluster using L2 measure and computes a new cluster center as mean of all the points inside. These two steps are repeated until convergence.</p>
+<div class="figure">
+<img src="./images/kmeans.png" />
+
+</div>
+<p>pros * algorithm is guaranteed to converge * is very fast, works well even on a subsample * is generic; initial clusters, distance measure and centre definition may be adapted to your needs</p>
+<p>cons * number of clusters has to be specified manually, it’s detection is very difficult * result tends to be very unstable — which means very — you should re-run many times and choose the best result.</p>
