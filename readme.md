@@ -1,5 +1,4 @@
 # Coding challenge
-\newpage
 
 ##Tower of Hanoi
 
